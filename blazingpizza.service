@@ -3,7 +3,7 @@ Description=Blazing Pizza demo application
 After=network.target
 
 [Service]
-ExecStart=/home/shepherdnick/.dotnet/dotnet /usr/local/bin/BlazingPizza/BlazingPizza.dll --urls http://0.0.0.0:5000
+ExecStart=/usr/local/bin/BlazingPizza/BlazingPizza --urls http://0.0.0.0:5000
 WorkingDirectory=/usr/local/bin/BlazingPizza
 #Restart=on-failure
 #StartLimitBurst=2
