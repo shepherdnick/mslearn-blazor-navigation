@@ -1,0 +1,16 @@
+[Unit]
+Description=Blazing Pizza demo application
+After=network.target
+
+[Service]
+ExecStart=/home/shepherdnick/.dotnet/dotnet /usr/local/bin/BlazingPizza/BlazingPizza.dll --urls http://0.0.0.0:5000
+WorkingDirectory=/usr/local/bin/BlazingPizza
+#Restart=on-failure
+#StartLimitBurst=2
+# Restart, but not more than once every 10 minutes
+#StartLimitInterval=600
+# Restart, but not more than once every 30s (for testing purposes)
+#StartLimitInterval=30
+
+[Install]
+WantedBy=multi-user.target
